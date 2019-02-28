@@ -1,0 +1,28 @@
+<h2 align="center" class="text-info">Welcome to Login Page</h2>
+
+<form [formGroup]="loginFormFunction()">
+  <table class="table-hover" align="center" bgcolor="#add8e6">
+    <tr>
+      <td>UserName:</td>
+      <td><input class="bg-info text-danger" type="text" placeholder="Enter User Name"  ></td>
+    </tr>
+    <tr>
+      <td>Password:</td>
+      <td><input type="password" placeholder="Enter Password" class="text-danger bg-info"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><input class="bg-success" type="submit" value="SignIn"></td>
+    </tr>
+
+    <tr>
+      <td>
+        New User?
+      </td>
+      <td><input class="bg-success" type="button"  routerLink="registrationPage" value="SignUp"></td>
+    </tr>
+
+  </table>
+</form>
+
+
