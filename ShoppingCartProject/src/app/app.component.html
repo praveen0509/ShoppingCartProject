@@ -1,23 +1,57 @@
 <header>
-  <nav class="navbar navbar-expand-sm bg-success">
+  <nav class="navbar navbar-expand-md bg-success">
     <ul class="navbar-nav row" >
-      <li class="nav-item col-md-3 "  >
-        <button class="text-danger" >Home</button>
+      <li class="nav-item col-sm-2">
+        <button class="text-danger" routerLink="">Home</button>
       </li>
-      <li class="nav-item col-md-3">
+      <li class="nav-item col-sm-2">
         <button class="text-danger" routerLink="loginPage">Login</button>
       </li>
-      <li class="nav-item col-md-3">
-        <button class="text-danger" routerLink="registrationPage">Signup</button>
+      <li class="nav-item col-sm-2">
+        <button class="text-danger" routerLink="registrationPage">Register</button>
       </li>
-      <li class="nav-item col-md-3">
+      <li class="nav-item col-sm-3">
+        <div class="dropdown ">
+          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+             Categories
+          </button>
+          <div class="dropdown-menu hover">
+            <a  class="dropdown-item" [routerLink]="['allMobilesDisplay', 1]" >Mobiles</a>
+            <a  class="dropdown-item" [routerLink]="['allMobilesDisplay', 2]">Laptops</a>
+            <a  class="dropdown-item" [routerLink]="['allMobilesDisplay', 3]">Cameras</a>
+            <a  class="dropdown-item" [routerLink]="['allMobilesDisplay', 4]">Tv's</a>
+            <a  class="dropdown-item" [routerLink]="['allMobilesDisplay', 5]">Appliances</a>
+            <a  class="dropdown-item" [routerLink]="['allMobilesDisplay', 6]">Men</a>
+            <a  class="dropdown-item" [routerLink]="['allMobilesDisplay', 7]">Women</a>
+            <a  class="dropdown-item" [routerLink]="['allMobilesDisplay', 8]">Baby & Kids</a>
+
+           <!-- <a class="dropdown-item active" routerLink="mobiles">Tv's</a>
+            <a class="dropdown-item" routerLink="menWatches">Appliances</a>
+            <a class="dropdown-item" href="#">Electronics</a>
+            <a class="dropdown-item" href="#">Men</a>
+            <a class="dropdown-item" href="#">Women</a>
+            <a class="dropdown-item" href="#">Watches</a>-->
+          </div>
+        </div>
+      </li>
+      <li class="nav-item col-sm-1">
         Search:
-        <input  type="text" placeholder="search">
+        <input  type="text" placeholder="search" size="40px">
+      </li>
+
+      <li class="nav-item col-sm-3">
+        <input  type="button" value="logOut" routerLink="logoutPage" class="text-danger">
       </li>
     </ul>
   </nav>
 </header>
-
+<!--<h2  class="text-primary bg-warning" align="center" style="background-size: 200px 100px">Welcome to Shopping Cart</h2>-->
 <router-outlet></router-outlet>
 
+
+<footer style="position:fixed; bottom: 0px">
+  <div  class="bg-secondary ">
+    @Copy: 2015 CopyRights.All CopyRights Reserved
+  </div>
+</footer>
 

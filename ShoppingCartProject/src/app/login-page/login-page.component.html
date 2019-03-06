@@ -1,14 +1,18 @@
-<h2 align="center" class="text-info">Welcome to Login Page</h2>
+<div style="background-image: url('/assets/images/RandomImages/image3.jpg'); background-size: cover" >
+<form [formGroup]="loginFormFunction()" style="height: 520px">
 
-<form [formGroup]="loginFormFunction()">
-  <table class="table-hover" align="center" bgcolor="#add8e6">
+  <table class="table-hover" align="right" bgcolor="#add8e6" style="position: absolute; right: 40px; top: 200px; border-radius: 20px">
+    <tr class="bg-primary">
+      <td></td>
+      <td ><h3>LoginPage</h3></td>
+    </tr>
     <tr>
       <td>UserName:</td>
-      <td><input class="bg-info text-danger" type="text" placeholder="Enter User Name"  ></td>
+      <td><input class="bg text-danger" type="text" placeholder="Enter User Name"  ></td>
     </tr>
     <tr>
       <td>Password:</td>
-      <td><input type="password" placeholder="Enter Password" class="text-danger bg-info"></td>
+      <td><input type="password" placeholder="Enter Password" class="text-danger"></td>
     </tr>
     <tr>
       <td></td>
@@ -25,4 +29,5 @@
   </table>
 </form>
 
+</div>
 

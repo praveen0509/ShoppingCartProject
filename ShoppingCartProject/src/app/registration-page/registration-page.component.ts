@@ -17,20 +17,29 @@ export class RegistrationPageComponent implements OnInit {
   ngOnInit() {
   }
 
-  formSubmission(){
+  formSubmission() {
+    alert('Valid');
   }
 
   createForm() {
     this.angForm = this.fb.group({
-      name: ['', Validators.required, Validators.minLength(4)],
-      fatherName: ['', Validators.required, Validators.minLength(4)],
-      email: ['', Validators.required, Validators.email],
-      password: ['', Validators.required, Validators.minLength(4)],
+      name: ['', Validators.compose([Validators.required, Validators.minLength(4)])],
+      fatherName: ['', Validators.compose([Validators.required, Validators.minLength(4)])],
+      email: ['', Validators.compose([Validators.required, Validators.email])],
+      password: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
+      confirmPwd: [''],
       phno: ['', Validators.required],
       dob: ['', Validators.required],
       address: ['', Validators.required ],
       dropdown: ['', Validators.required]
-    });
+    }, {validator: this.passwordValidator});
+  }
+
+  passwordValidator(group: FormGroup) {
+    const pwd = group.controls.password.value;
+    const confirmPwd = group.controls.confirmPwd.value;
+
+    return pwd === confirmPwd ? null : {notSame : false } ;
   }
 
 }
