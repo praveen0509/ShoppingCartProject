@@ -8,6 +8,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { SlideShowComponent } from './slide-show/slide-show.component';
 import { MenWatchesComponent } from './men-watches/men-watches.component';
 import { AllMobilesDisplayPageComponent } from './mobileFiles/all-mobiles-display-page/all-mobiles-display-page.component';
+import { DisplayCompleteDetailsComponent } from './display-complete-details/display-complete-details.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,8 @@ import { AllMobilesDisplayPageComponent } from './mobileFiles/all-mobiles-displa
     SlideShowComponent,
     MenWatchesComponent,
     AllMobilesDisplayPageComponent,
+    DisplayCompleteDetailsComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import { AllMobilesDisplayPageComponent } from './mobileFiles/all-mobiles-displa
       { path: 'mobiles', component: SlideShowComponent },
       { path: 'menWatches', component: MenWatchesComponent },
       { path: 'allMobilesDisplay', component: AllMobilesDisplayPageComponent },
-      { path: 'allMobilesDisplay/:', component: AllMobilesDisplayPageComponent }
+      { path: 'allMobilesDisplay/:', component: AllMobilesDisplayPageComponent },
+      { path: 'displayCompleteDetails', component: DisplayCompleteDetailsComponent }
 
     ])
   ],
